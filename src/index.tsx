@@ -68,11 +68,10 @@ app.get('/', (c) => {
       <header class="site-header" id="siteHeader">
         <div class="container header__inner">
           <a href="#top" class="logo" aria-label="Auto Centrum Opolony">
-            <span class="logo__mark">O</span>
-            <span class="logo__text">
-              <strong>Auto Centrum</strong>
-              <span>Opolony · od 1986</span>
+            <span class="logo__plate">
+              <img src="/static/img/logo-original.png" alt="Auto Centrum Opolony — logo" width="160" height="68" />
             </span>
+            <span class="logo__tag">od 1986</span>
           </a>
 
           <nav class="nav" id="mainNav">
@@ -628,11 +627,9 @@ app.get('/', (c) => {
         <div class="container">
           <div class="footer__grid">
             <div>
-              <div class="logo" style="margin-bottom:18px">
-                <span class="logo__mark">O</span>
-                <span class="logo__text">
-                  <strong>Auto Centrum</strong>
-                  <span>Opolony · od 1986</span>
+              <div class="logo logo--footer" style="margin-bottom:18px">
+                <span class="logo__plate">
+                  <img src="/static/img/logo-original.png" alt="Auto Centrum Opolony — logo" width="180" height="76" />
                 </span>
               </div>
               <p>

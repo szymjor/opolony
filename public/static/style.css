@@ -162,40 +162,53 @@ p { margin: 0 0 1em; }
 }
 
 /* Logo */
-.logo { display: flex; align-items: center; gap: 12px; }
-.logo__mark {
-  width: 46px;
-  height: 46px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-  display: grid;
-  place-items: center;
-  color: #111;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 1.4rem;
-  letter-spacing: -0.02em;
-  box-shadow: 0 6px 18px -6px var(--accent-glow);
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.logo__plate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   flex-shrink: 0;
 }
-.logo__text {
+.logo__plate img {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 170px;
+}
+.logo:hover .logo__plate {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px -8px rgba(255, 106, 26, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+.logo__tag {
+  display: inline-flex;
+  align-items: center;
   font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
-  line-height: 1;
-}
-.logo__text strong {
-  display: block;
-  font-size: 1.25rem;
-  color: var(--text-strong);
-  letter-spacing: 0.05em;
-}
-.logo__text span {
-  display: block;
+  letter-spacing: 0.25em;
   font-size: 0.72rem;
   color: var(--accent);
-  letter-spacing: 0.25em;
-  margin-top: 4px;
-  font-weight: 600;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 106, 26, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 106, 26, 0.08);
+  white-space: nowrap;
+}
+.logo--footer .logo__plate img { height: 52px; max-width: 200px; }
+@media (max-width: 640px) {
+  .logo__plate { padding: 6px 10px; }
+  .logo__plate img { height: 36px; max-width: 140px; }
+  .logo__tag { display: none; }
 }
 
 /* Nav */

@@ -75,15 +75,15 @@ export const renderer = jsxRenderer(({ children, title, description }) => {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
         <meta property="og:url" content={siteUrl} />
-        <meta property="og:image" content={`${siteUrl}/static/img/hero.jpg`} />
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="1080" />
+        <meta property="og:image" content={`${siteUrl}/static/img/og-image.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content={`${siteUrl}/static/img/hero.jpg`} />
+        <meta name="twitter:image" content={`${siteUrl}/static/img/og-image.jpg`} />
 
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -96,8 +96,11 @@ export const renderer = jsxRenderer(({ children, title, description }) => {
         {/* Styles */}
         <link href="/static/style.css" rel="stylesheet" />
 
-        {/* Favicon (SVG, inline) */}
-        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23ff6a1a'/><text x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%23111'>O</text></svg>" />
+        {/* Favicon */}
+        <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png" />
 
         {/* Schema.org */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
